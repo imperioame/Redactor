@@ -8,6 +8,22 @@ consignas[1] = 'consigna 2';
 consignas[2] = 'consigna 3';
 
 
+$("#nav_inicio").on('click', function(){
+    $('#ultimos, #historico').addClass('hidden');
+    $('#inicio').removeClass('hidden');
+});
+
+$("#nav_ultimos").on('click', function(){
+    $('#inicio, #historico').addClass('hidden');
+    $('#ultimos').removeClass('hidden');
+});
+
+$("#nav_historico").on('click', function(){
+    $('#ultimos, #inicio').addClass('hidden');
+    $('#historico').removeClass('hidden');
+});
+
+
 $('#form_boton_comenzar').submit(function(e){
     e.preventDefault();
     $('#escritura_cuento').removeClass('hidden');
@@ -16,6 +32,17 @@ $('#form_boton_comenzar').submit(function(e){
     empezar_contador();
     sortear_consignas();
 });
+
+$('#form_cuento').submit(function(e){
+    e.preventDefault();
+    $('#escritura_cuento').addClass('hidden');
+    $('#intro').removeClass('hidden');
+    $('#inicio').addClass('hidden');
+    $('#ultimos').removeClass('hidden');
+
+    clearInterval(contador_principal_cuento);
+});
+
 
 
 function sortear_consignas(){
@@ -48,15 +75,14 @@ function empezar_contador(){
     var minutos = 29;
     var segundos = 60;
 
-    var myInterval = setInterval(function () {
+    var contador_principal_cuento = setInterval(function () {
         --segundos;
         if(segundos == 0){
             if(minutos != 0){
                 --minutos;
                 segundos = 60;
             }else{
-                // to stop the counter
-                clearInterval(myInterval);
+                clearInterval(contador_principal_cuento);
             }
         }
 

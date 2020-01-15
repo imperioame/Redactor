@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Redactor</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <script src="js/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+    <header class="container_flex_columnas mb-05">
+        <div class="container_flex_filas flex_centrado">
+            <img src="imgs/logo_redactor_png.png" alt="Logo Redactor" title="Logo Redactor">
+            <h1>Redactor</h1>
+        </div>
+        <div class="salto_de_linea"></div>
+        <nav class="flex_centrado mt-05">
+            <ul class="container_flex_filas flex_centrado">
+                <li><a href="#inicio" id="nav_inicio">Escribí!</a></li>
+                <li><a href="#ultimos" id="nav_ultimos">Los últimos cuentos</a></li>
+                <li><a href="#historico" id="nav_historico">Histórico</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="container_flex_columnas flex_centrado" id="inicio">
+        <section id="intro">
+            <h2>La app que mejora tu creatividad</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quibusdam, dolor sed non voluptatibus
+                vitae eveniet fugit maxime cupiditate magni quisquam repudiandae consectetur! Dolore repellat dolores
+                assumenda a! Harum, maxime.</p>
+                <h3>Próxima instrucción en</h3>
+                <p id="contador_proxima_instruccion"></p>
+            <form class="mt-05" id="form_boton_comenzar">
+                <button type="submit">Go!</button>
+            </form>
+        </section>
+
+        <section id="escritura_cuento" class="hidden">
+            <h2>Escribí un cuento con...</h2>
+            <ul>
+                <li id="primera_consigna"></li>
+                <li id="segunda_consigna"></li>
+                <li id="tercera_consigna"></li>
+            </ul>
+
+            <p id="contador">30:00</p>
+            <form action="" class="mt-05" id="form_cuento">
+                <input type="text" name="" id="titulo" placeholder="Título">
+                <textarea name="" id="textbox_cuento" cols="40" rows="5"
+                    placeholder="Escribí tu cuento acá!"></textarea>
+                <button type="submit" class="mt-05">¡Basta para mi!</button>
+            </form>
+
+        </section>
+    </main>
+
+
+    <section id="ultimos" class="hidden">
+        <h2>
+            Cuentos escritos con esta instrucción
+        </h2>
+        <h3 id="ultimos_instruccion"></h3>
+        <div class="ultimos_cuento"><p></p></div>
+    </section>
+
+    <section id="historico" class="hidden">
+    <h2>Histórico de cuentos</h2>
+<form action="">
+    <input type="text" name="" id="buscador_historico">
+    <button type="submit">Buscar</button>
+</form>        
+    </section>
+
+
+    <script src="js/code.js"></script>
+
+</body>
+
+</html>
