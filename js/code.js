@@ -1,13 +1,17 @@
-/*
-    hay que traer de la db las posibles consignas y cargarlas en un array
-*/
 
-var consignas = [];
-consignas[0] = 'consigna 1';
-consignas[1] = 'consigna 2';
-consignas[2] = 'consigna 3';
+/* ++++++++++++ LOGIN ++++++++++++ */
+$('#boton_login').on('click', function(){
+    $('#container_modal_login').removeClass('hidden');
+});
+
+$('#container_modal_login, #cerrar_modal').on('click', function(){
+    $('#container_modal_login').addClass('hidden');
+});
+
+/* ++++++++++++ FIN LOGIN ++++++++++++ */
 
 
+/* ++++++++++++ VISTAS Y NAVEGACIÓN ++++++++++++ */
 $("#nav_inicio").on('click', function(){
     $('#ultimos, #historico').addClass('hidden');
     $('#inicio').removeClass('hidden');
@@ -22,8 +26,9 @@ $("#nav_historico").on('click', function(){
     $('#ultimos, #inicio').addClass('hidden');
     $('#historico').removeClass('hidden');
 });
+/* ++++++++++++ FIN VISTAS Y NAVEGACIÓN ++++++++++++ */
 
-
+/* ++++++++++++ FLUJO PRINCIPAL ++++++++++++ */
 $('#form_boton_comenzar').submit(function(e){
     e.preventDefault();
     $('#escritura_cuento').removeClass('hidden');
@@ -92,3 +97,5 @@ function empezar_contador(){
     }, 1000);
 
 }
+
+/* ++++++++++++ FIN FLUJO PRINCIPAL ++++++++++++ */

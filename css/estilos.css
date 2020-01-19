@@ -67,6 +67,24 @@ header img{
     flex-basis: 100%;
 }
 
+#container_modal_login{
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#modal_login{
+    background-color: wheat;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 50%;
+}
+
 /*
 *************************************************
 Otros estilos 
@@ -105,4 +123,14 @@ header nav ul li a{
 header nav ul li a:hover{
     color: rgb(80, 80, 255);
     transition-duration: 300ms;
+}
+
+#login{
+    width: 10%;
+}
+
+
+#login a img, #login a p{
+    text-align: center;
+    display: block;
 }

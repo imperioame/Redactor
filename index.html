@@ -13,6 +13,7 @@
 
 
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/inicializacion_variables.js"></script>
 
 </head>
 
@@ -21,6 +22,12 @@
         <div class="container_flex_filas flex_centrado">
             <img src="imgs/logo_redactor_png.png" alt="Logo Redactor" title="Logo Redactor">
             <h1>Redactor</h1>
+        </div>
+        <div id="login">
+            <a href="" id="boton_login">
+                <img src="imgs/icos/icons_Perfil.svg" alt="img_usuario_no_registrado">
+                <p>conectarse / registrarse</p>
+            </a>
         </div>
         <div class="salto_de_linea"></div>
         <nav class="flex_centrado mt-05">
@@ -31,7 +38,37 @@
             </ul>
         </nav>
 
+        
     </header>
+
+    <section id="container_modal_login" class="hidden container_flex_filas flex_centrado">
+        <div id="modal_login" class="container_flex_filas">
+            <a href="" id="cerrar_modal"><img src="imgs/icos/cerrar.svg" alt="cerrar modal"></a>
+            <img src="imgs/icos/icons_Perfil.svg" alt="Bienvenido!">
+            <a href="" id="cambiar_login">Registrarse</a>
+
+
+            <form action="" id="crear_usuario" class="hidden">
+                <input type="email" name="usuario" id="" placeholder="ejemplo@correo.com">
+                <label for="usuario">Correo</label>
+                <input type="password" name="contrasena" id="" placeholder="contraseña">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena_2" id="" placeholder="repetir contraseña">
+                <label for="contrasena_2">Repetir contraseña</label>
+                <button type="submit">Registrarse!</button>
+            </form>
+            <form action="" id="crear_usuario">
+                
+                <input type="email" name="usuario" id="" placeholder="ejemplo@correo.com">
+                <label for="usuario">Correo</label>
+                <input type="password" name="contrasena" id="" placeholder="contraseña">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena_2" id="" placeholder="repetir contraseña">
+                <label for="contrasena_2">Repetir contraseña</label>
+                <button type="submit">Registrarse!</button>
+            </form>
+        </div>
+    </section>
 
     <main class="container_flex_columnas flex_centrado" id="inicio">
         <section id="intro">
