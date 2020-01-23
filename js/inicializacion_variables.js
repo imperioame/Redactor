@@ -3,7 +3,6 @@ var endpoint_enviar_cuentos = '';
 var endpoint_traer_cuentos = '';
 
 
-
 /*
     hay que traer de la db las posibles consignas y cargarlas en un array
 */
